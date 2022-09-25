@@ -76,7 +76,7 @@ function Main() {
   return (
     <div className={classes.container}>
       <div className={classes.topBar} onClick={goToHome}>
-        <Typography className={classes.topBarText}>INVENTORI</Typography>
+        <Typography className={classes.topBarText}>INVENTARI</Typography>
       </div>
       <div className={classes.mainContainer}>{loadContent()}</div>
     </div>
