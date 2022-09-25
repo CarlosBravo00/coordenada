@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import { helloWorldCall } from "../services/api_calls";
 import { makeStyles, Typography } from "@material-ui/core";
+
+import { helloWorldCall } from "../services/api_calls";
+import FileUploader from "../components/fileUploader";
 
 const useStyles = makeStyles(() => ({
   container: {
@@ -17,13 +19,14 @@ function Main() {
   async function makeCall() {
     const response = await helloWorldCall();
     console.log(response);
-    setHelloWorld("hello");
+    setHelloWorld(response.data);
   }
 
   return (
     <div className={classes.container}>
       <Typography> hi {helloWorld}</Typography>
       <button onClick={makeCall}> hi clickeame </button>
+      <FileUploader></FileUploader>
     </div>
   );
 }
