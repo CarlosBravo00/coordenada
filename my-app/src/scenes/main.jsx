@@ -11,6 +11,7 @@ const useStyles = makeStyles(() => ({
     border: "none",
   },
   topBar: {
+    cursor: "pointer",
     height: "30px",
     borderBottom: "3px grey solid",
     textAlign: "center",
