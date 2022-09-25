@@ -1,5 +1,5 @@
 const axios = require("axios");
-const API_URL = "https://jcixb6pvr9.execute-api.us-east-1.amazonaws.com";
+const API_URL = "https://jcixb6pvr9.execute-api.us-east-1.amazonaws.com/prod";
 
 export function helloWorldCall() {
   return axios({
@@ -11,17 +11,19 @@ export function helloWorldCall() {
   });
 }
 
-export function readTicketCall({ IMAGE }) {
-  const foo = {
-    image: IMAGE,
-  };
+export function readTicketCall(IMAGE) {
   return axios({
     method: "POST",
     url: `${API_URL}/readTicket`,
     headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Headers":
+        "Content-Type,X-Amz-Date,Authorization,X-Api-Key,x-requested-with",
+      "Access-Control-Allow-Methods": "OPTIONS,POST,GET,PUT,DELETE",
       "Content-Type": "application/json",
     },
-    data: foo, // object describing the foo
-    body: JSON.stringify(foo), // aws4 looks for body; axios for data
+    data: {
+      image: IMAGE,
+    }, // object describing the foo
   });
 }
