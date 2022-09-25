@@ -25,12 +25,13 @@ const useStyles = makeStyles(() => ({
   buttonBox: {
     cursor: "pointer",
     fontSize: 20,
-    fontWeight: 400,
+    fontWeight: 600,
+    letterSpacing: "4px",
     textAlign: "center",
     padding: "40px 20px 40px 20px",
     margin: "25px 15px 0px 15px",
     backgroundColor: "#abf7b1",
-    border: "3px solid #0E9D3B",
+    border: "4px solid #0E9D3B",
     borderRadius: "25px",
   },
 }));

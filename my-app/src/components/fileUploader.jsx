@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { makeStyles, Typography } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core";
 import { readTicketCall } from "../services/api_calls";
 
 const useStyles = makeStyles(() => ({
@@ -85,7 +85,7 @@ function FileUploader() {
             key={item.id}
             style={{
               margin: "15px 70px 10px 70px",
-              border: "3px solid #0E9D3B",
+              border: "4px solid #0E9D3B",
               padding: "5px",
               display: "flex",
               flexDirection: "row",
